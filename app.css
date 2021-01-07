@@ -1,0 +1,116 @@
+/*-----Variables------*/
+:root{
+	--ColorPrincipal: #d90062;
+	--ColorPrincipalOpacidad75: rgba(217,0,98,0.75);
+	--ColorSecundario: #14192d;
+	--ColorSecundarioOpacidad75: rgba(20,25,100,0.75);
+	--ColorTerciario: #501464;
+	--ColorTerciariorioOpacidad75: rgba(80,20,100,0.75);
+	--ColorBlanco: #fff;
+	--ColorGris25: #f3f3f3;
+	--ColorGris100: #ccc;
+	--ColorGris75: #666;
+	--ColorNegro: #000;
+	--ColorEnlace: #509ee3;
+	--ColorTitulos: #333;
+	--ColorTextos: #222;
+	--ColorBlancoOpacidad50: rgba(255,255,255, 0.5);
+	--ColorNegroOpacidad50: rgba(0,0,0,0.5);
+	--font:'Noto Sans JP', sans-serif;
+	--MaximoAncho: 1200px;
+	--Alturamenu: 4rem;
+}
+
+/*-----Reseteador-----*/
+html{
+	box-sizing: border-box;
+	font-family: var(--font);
+	font-size: 16px;
+	scroll-behavior: smooth;/*La caja se desplaza suavemente, utilizando una función de tiempo definida por el agente de usuario (user-agent) sobre un período de tiempo también definido por éste. Los agentes de usuario seguirán las convenciones de su propia plataforma, en caso de que existan.*/
+}
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	color: var(--ColorTextos);
+	overflow-x: hidden; /*Oculta la barra de despalazamiento cuando el elemento sobre pasa el eje X*/
+}
+a{
+	color: var(--ColorEnlace);
+	transition: all 0.5s ease-out;
+}
+a:hover{
+	opacity: 0.75;
+}
+h1, h2, h3, h4, h5, h6{
+	margin: 0;
+}
+h1{
+	font-size: 2rem;
+}
+
+h2{
+	font-size: 1.5rem;
+}
+h3{
+	font-size: 1.25rem;
+}
+h4{
+	font-size: 1rem;
+}
+h5{
+	font-size: 1.75rem;
+}
+h6{
+	font-size: 1.5rem;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+p{
+	line-height: 1.6rem;
+}
+/*-----Componentes-----*/
+.menu{
+	display: none;
+}
+
+/*-----Utilidades-----*/
+.cajaSombraEstilo01{
+	box-shadow: 4px 4px 16px rgba(0,0,0,0.25);
+}
+.subcontainer{
+	margin: 0 auto;
+	max-width: var(--MaximoAncho);
+	color: var(--ColorPrincipal);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.none{
+	display: none;
+}
+
+/*-----Estilos Propios del Sitio-----*/
+button{
+	background-color: var(--ColorPrincipal);
+}
+h1, button{
+	margin: 20px;
+	
+}
+
+.header{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	height: var(--AlturaMenu);
+	background-color: var(--ColorSecundario);
+}
+nav{
+	display: none;
+}
